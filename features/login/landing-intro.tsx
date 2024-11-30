@@ -1,6 +1,6 @@
 import { APP_NAME } from "../../helper/app-constants";
 
-function LandingIntro() {
+export default function LandingIntro() {
   return (
     <div className="hero min-h-full rounded-l-xl bg-base-200">
       <div className="hero-content py-12">
@@ -23,5 +23,3 @@ function LandingIntro() {
     </div>
   );
 }
-
-export default LandingIntro;

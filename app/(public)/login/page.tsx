@@ -1,3 +1,4 @@
+import LoginForm from "@/components/forms/login-form";
 import LandingIntro from "@/features/login/landing-intro";
 
 export default function Login() {
@@ -8,7 +9,9 @@ export default function Login() {
           <div>
             <LandingIntro />
           </div>
-          <div className="py-24 px-10"></div>
+          <div className="py-24 px-10">
+            <LoginForm/>
+          </div>
         </div>
       </div>
     </div>

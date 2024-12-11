@@ -11,7 +11,6 @@ interface LoginObj {
 
 export default function LoginForm() {
   const [errorMessage, setErrorMessage] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
   const [loginObj, setLoginObj] = useState<LoginObj>({
     password: "",
     username: "",
@@ -23,7 +22,7 @@ export default function LoginForm() {
   };
 
   return (
-    <form onSubmit={(e) => submitForm(e)}>
+    <form action={loginProcess}>
       <div className="mb-4">
         <p className="text-center text-lg md:mt-0 mt-6 mb-5  font-semibold">
           Enter Your Credential to Continue
@@ -51,7 +50,6 @@ export default function LoginForm() {
           <ErrorText styleClass="mt-8">{errorMessage}</ErrorText>
         )}
         <button type="submit" className={`btn mt-2 w-full btn-primary btn-circle`}>
-          {loading && <span className="loading loading-spinner"></span>}
           Login
         </button>
       </div>
